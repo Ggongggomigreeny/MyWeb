@@ -68,12 +68,12 @@ recognition.onresult = function(event) {
   console.log('인식된 텍스트: ' + speechResult);
 
   // '켜'라는 단어가 포함된 경우 LED를 켬
-  if ((speechResult.indexOf('밝게') !== -1) || (speechResult.indexOf('켜') !== -1)){
+  if ((speechResult.indexOf('밝게') !== -1) || (speechResult.indexOf('켜') !== -1) || (speechResult.indexOf('on') !== -1)){
     ledON()
   }
 
   // '꺼'라는 단어가 포함된 경우 LED를 끔
-  if ((speechResult.indexOf('어둡게') !== -1) || (speechResult.indexOf('꺼') !== -1)) {
+  if ((speechResult.indexOf('어둡게') !== -1) || (speechResult.indexOf('꺼') !== -1) || (speechResult.indexOf('off') !== -1)) {
     ledOFF()
   }
 };
